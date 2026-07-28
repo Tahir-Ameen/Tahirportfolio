@@ -42,13 +42,15 @@
 
     /* ===================== RESET ===================== */
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
     body {
       font-family: var(--font-body);
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
       transition: background 0.3s, color 0.3s;
+      overflow-x: hidden;
+      width: 100%;
     }
     a { text-decoration: none; color: inherit; }
 
@@ -850,7 +852,7 @@
       align-self: flex-start;
     }
     @media (max-width: 480px) {
-      .form-row { flex-direction: column; }
+      .form-row { flex-direction: column; gap: 0.8rem; }
     }
 
     /* ===================== RESPONSIVE ===================== */
@@ -944,26 +946,106 @@
       padding-top: 1.5rem;
       border-top: 1px solid var(--border);
     }
-    @media (max-width: 480px) {
-      .profile-details { grid-template-columns: 1fr; }
-      .profile-header { flex-direction: column; text-align: center; }
+
+
+    /* ===================== MOBILE HAMBURGER ===================== */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text);
+      font-size: 1.3rem;
+      padding: 0.4rem;
+      border-radius: 8px;
+      transition: background 0.2s;
     }
+    .mobile-menu-btn:hover { background: var(--accent-lt); }
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 199;
+    }
+    .sidebar-overlay.open { display: block; }
 
     /* ===================== RESPONSIVE ===================== */
     @media (max-width: 768px) {
-      .sidebar { transform: translateX(-100%); }
+      .mobile-menu-btn { display: flex; align-items: center; justify-content: center; }
+
+      .sidebar { transform: translateX(-100%); width: var(--sidebar-w); }
       .sidebar.mobile-open { transform: translateX(0); }
       .main { margin-left: 0 !important; }
-      .hero { flex-direction: column-reverse; text-align: center; padding: 3rem 1.5rem; min-height: auto; }
-      .hero-bio { margin: 0 auto 2rem; }
+
+      .topbar { padding: 0.7rem 1rem; gap: 0.5rem; flex-wrap: nowrap; overflow-x: auto; }
+      .topbar-name { font-size: 1rem; }
+      .topbar-right { gap: 0.5rem; }
+      .topbar-right .dropdown-wrap,
+      .topbar-right .topbar-status-dot { display: none; }
+      .theme-toggle { padding: 0.35rem 0.7rem; font-size: 0.78rem; }
+      .theme-toggle span { display: none; }
+      .topbar-right .btn-sm { padding: 0.45rem 0.8rem; font-size: 0.8rem; }
+
+      .hero { flex-direction: column-reverse; text-align: center; padding: 2.5rem 1.2rem; min-height: auto; gap: 2rem; }
+      .hero-bio { margin: 0 auto 2rem; max-width: 100%; }
       .hero-buttons { justify-content: center; }
-      .photo-frame { width: 200px; height: 240px; }
-      section { padding: 3.5rem 1.5rem; }
-      .about-info { grid-template-columns: 1fr; }
+      .photo-frame { width: 180px; height: 220px; }
+
+      section { padding: 3rem 1.2rem; }
+      .section-title { margin-bottom: 2rem; }
+      .about-info { grid-template-columns: 1fr; max-width: 100%; }
+
+      .edu-table { font-size: 0.8rem; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .edu-table thead, .edu-table tbody, .edu-table tr, .edu-table th, .edu-table td { display: revert; }
+      .edu-table th, .edu-table td { padding: 0.6rem 0.7rem; white-space: nowrap; }
+
+      .contact-cards { flex-direction: column; }
+      .contact-card { min-width: 0; width: 100%; padding: 1.2rem 1.4rem; }
+
+      .contact-form-wrap { max-width: 100%; }
+
+      .code-intro-section { padding: 1.5rem 1rem 3.5rem; }
+      .code-window-body { font-size: 0.78rem; padding: 1.4rem 1.2rem; min-height: auto; }
+      .code-intro-badge { font-size: 0.72rem; padding: 0.5rem 1rem; text-align: center; }
+
+      .skills-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+
+      .profile-card { max-width: 100%; padding: 1.5rem; }
+      .profile-details { grid-template-columns: 1fr; }
+      .profile-header { flex-direction: column; text-align: center; }
+      .profile-actions { flex-direction: column; }
+      .profile-actions .btn { width: 100%; justify-content: center; }
+
+      .modal { width: 92vw; padding: 1.8rem; }
+      .auth-modal { width: 92vw; padding: 2rem 1.5rem 1.5rem; }
+
+      footer { padding: 1.5rem 1rem; font-size: 0.8rem; }
+
+      #back-to-top { bottom: 1.2rem; padding: 0.5rem 1.1rem; font-size: 0.8rem; }
+      #toast-container { bottom: 1.2rem; right: 1rem; left: 1rem; }
+      .toast { min-width: 0; width: 100%; font-size: 0.82rem; padding: 0.7rem 1.1rem; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 2rem 1rem; }
+      .hero-name { font-size: 1.8rem; }
+      .hero-role { font-size: 1rem; }
+      .hero-bio { font-size: 0.9rem; }
+      section { padding: 2.5rem 1rem; }
+      .topbar-right .btn-sm span { display: none; }
+      .edu-table { font-size: 0.72rem; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+      .stat-number { font-size: 2rem; }
     }
   </style>
 </head>
 <body>
+
+<!-- ========== SIDEBAR OVERLAY ========== -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
 
 <!-- ========== SIDEBAR ========== -->
 <div class="sidebar" id="sidebar">
@@ -989,7 +1071,12 @@
 
   <!-- TOPBAR -->
   <div class="topbar">
-    <span class="topbar-name">M Tahir Ameen</span>
+    <div style="display:flex;align-items:center;gap:0.6rem">
+      <button class="mobile-menu-btn" id="mobile-menu-btn" title="Open menu">
+        <i class="fa fa-bars"></i>
+      </button>
+      <span class="topbar-name">M Tahir Ameen</span>
+    </div>
     <div class="topbar-right">
       <button class="theme-toggle" id="theme-toggle">
         <i class="fa fa-moon" id="theme-icon"></i>
@@ -1436,8 +1523,33 @@
   // ===== 1. SIDEBAR HOVER AUTO-EXPAND =====
   const sidebar = document.getElementById("sidebar");
   const main = document.getElementById("main");
+  const sidebarOverlay = document.getElementById("sidebar-overlay");
+  const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   sidebar.classList.add("collapsed");
   main.classList.add("expanded");
+
+  // Mobile hamburger toggle
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("mobile-open");
+      sidebarOverlay.classList.toggle("open");
+    });
+  }
+  if (sidebarOverlay) {
+    sidebarOverlay.addEventListener("click", () => {
+      sidebar.classList.remove("mobile-open");
+      sidebarOverlay.classList.remove("open");
+    });
+  }
+  // Close mobile sidebar on nav click
+  document.querySelectorAll(".nav-item").forEach(item => {
+    item.addEventListener("click", () => {
+      if (window.innerWidth <= 768) {
+        sidebar.classList.remove("mobile-open");
+        sidebarOverlay.classList.remove("open");
+      }
+    });
+  });
 
   // ===== 2. DARK / LIGHT MODE =====
   const themeToggle = document.getElementById("theme-toggle");

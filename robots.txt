@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://muhammadtahirameen.up.railway.app/sitemap.xml

@@ -1768,24 +1768,41 @@
     observer.observe(body);
   })();
 
-  // ===== 11. TYPEWRITER EFFECT =====
+  // ===== 11. TYPEWRITER EFFECT (replays on every scroll into view) =====
   const roleEl = document.querySelector('.hero-role');
   if (roleEl) {
-    const text = roleEl.textContent;
-    roleEl.innerHTML = '<span class="typewriter-cursor"></span>';
-    const cursor = roleEl.querySelector('.typewriter-cursor');
-    let i = 0;
-    const type = () => {
-      if (i < text.length) {
-        cursor.textContent += text[i];
-        i++;
-        const delay = i === 1 ? 400 : 45 + Math.random() * 40;
-        setTimeout(type, delay);
-      } else {
-        cursor.classList.add('done');
+    const fullText = roleEl.textContent.trim();
+    let activeTimer = null;
+
+    function startTypewriter() {
+      if (activeTimer) { clearTimeout(activeTimer); activeTimer = null; }
+      roleEl.innerHTML = '<span class="typewriter-cursor"></span>';
+      const cursor = roleEl.querySelector('.typewriter-cursor');
+      let i = 0;
+      function type() {
+        if (i < fullText.length) {
+          cursor.textContent += fullText[i];
+          i++;
+          const delay = i === 1 ? 400 : 45 + Math.random() * 40;
+          activeTimer = setTimeout(type, delay);
+        } else {
+          cursor.classList.add('done');
+          activeTimer = null;
+        }
       }
-    };
-    setTimeout(type, 900);
+      activeTimer = setTimeout(type, 300);
+    }
+
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startTypewriter();
+        } else {
+          if (activeTimer) { clearTimeout(activeTimer); activeTimer = null; }
+        }
+      });
+    }, { threshold: 0.4 });
+    heroObserver.observe(roleEl);
   }
 
   // ===== 12. QUILL RICH TEXT EDITOR =====

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Tahir Ameen - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    @page { size: A4; margin: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 13px;
+    }
+
+    .cv {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+    }
+
+    /* ===== LEFT SIDEBAR ===== */
+    .sidebar {
+      background: #1a2b4a;
+      color: #fff;
+      padding: 35px 22px;
+    }
+
+    .photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    .sidebar h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 15px;
+      color: #fff;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid rgba(255,255,255,0.2);
+      letter-spacing: 0.5px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+    .sidebar ul li {
+      font-size: 11.5px;
+      padding: 5px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      color: #ffffff;
+      font-weight: 500;
+    }
+    .sidebar ul li .icon {
+      width: 16px;
+      text-align: center;
+      color: #6ba3eb;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .sidebar .languages-list li {
+      font-size: 12px;
+      padding: 3px 0;
+    }
+
+    .sidebar .skill-item {
+      margin-bottom: 10px;
+    }
+    .sidebar .skill-item .skill-name {
+      font-size: 11.5px;
+      margin-bottom: 4px;
+      color: #ffffff;
+      font-weight: 500;
+    }
+    .sidebar .skill-item .skill-bar {
+      height: 5px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .sidebar .skill-item .skill-bar .fill {
+      height: 100%;
+      background: #6ba3eb;
+      border-radius: 10px;
+    }
+
+    /* ===== RIGHT MAIN ===== */
+    .main-content {
+      padding: 35px 30px;
+    }
+
+    .main-content h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      color: #1a2b4a;
+      margin-bottom: 4px;
+    }
+    .main-content .subtitle {
+      font-size: 13px;
+      color: #1a56db;
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: 0.3px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+    .section h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 14px;
+      color: #1a2b4a;
+      margin-bottom: 8px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #1a56db;
+      display: inline-block;
+    }
+
+    .section p {
+      color: #444;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 18px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: #dde4ec;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 14px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -18px;
+      top: 5px;
+      width: 10px;
+      height: 10px;
+      background: #1a56db;
+      border-radius: 50%;
+    }
+    .timeline-item h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1a2b4a;
+    }
+    .timeline-item .place {
+      font-size: 11.5px;
+      color: #1a56db;
+      font-weight: 500;
+    }
+    .timeline-item .year {
+      font-size: 11px;
+      color: #888;
+      margin-bottom: 3px;
+    }
+    .timeline-item p {
+      font-size: 11.5px;
+      color: #555;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 20px;
+    }
+
+    @media print {
+      body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .cv { margin: 0; box-shadow: none; }
+      .sidebar { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cv">
+
+  <!-- ===== SIDEBAR ===== -->
+  <div class="sidebar">
+    <img src="profile.png" alt="Profile" class="photo"/>
+
+    <h2>Contact</h2>
+    <ul>
+      <li><span class="icon">&#9742;</span> +92-308-4870782</li>
+      <li><span class="icon">&#9993;</span> hafiztahirameen786@gmail.com</li>
+      <li><span class="icon">&#9873;</span> University of the Punjab, Lahore</li>
+      <li><span class="icon">&#9734;</span> Pakistani</li>
+    </ul>
+
+    <h2>Languages</h2>
+    <ul class="languages-list">
+      <li><span class="icon">&#10003;</span> Urdu - Native</li>
+      <li><span class="icon">&#10003;</span> Punjabi - Native</li>
+      <li><span class="icon">&#10003;</span> Arabic - Fluent</li>
+      <li><span class="icon">&#10003;</span> English - Proficient</li>
+    </ul>
+
+    <h2>Skills</h2>
+    <div class="skill-item">
+      <div class="skill-name">Quranic Recitation & Tajweed</div>
+      <div class="skill-bar"><div class="fill" style="width:95%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Islamic Curriculum Design</div>
+      <div class="skill-bar"><div class="fill" style="width:90%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Public Speaking & Khutbah</div>
+      <div class="skill-bar"><div class="fill" style="width:92%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Classroom Instruction</div>
+      <div class="skill-bar"><div class="fill" style="width:88%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Arabic Language</div>
+      <div class="skill-bar"><div class="fill" style="width:85%"></div></div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name">Writing & Urdu Literature</div>
+      <div class="skill-bar"><div class="fill" style="width:80%"></div></div>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="main-content">
+
+    <h1>Muhammad Tahir Ameen</h1>
+    <div class="subtitle">Islamic Educator &amp; Quran Instructor</div>
+
+    <!-- PROFILE -->
+    <div class="section">
+      <h3>Profile</h3>
+      <p>Dedicated Islamic educator with over 4 years of experience in Quranic instruction, Islamic curriculum design, and public religious speaking. Proficient in Arabic, Urdu, Punjabi and English. Passionate about guiding students in academic, personal, and spiritual growth through structured Islamic education programs.</p>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <h3>Education</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>M.Phil Islamic Studies</h4>
+          <div class="place">Imperial College of Business Studies</div>
+          <div class="year">2025 - 2027</div>
+          <p>In Progress</p>
+        </div>
+        <div class="timeline-item">
+          <h4>MA Islamic Studies (Dars-e-Nazami)</h4>
+          <div class="place">Wafaq-ul-Madaris Islamia Rizvia, Pakistan</div>
+          <div class="year">2017 - 2025</div>
+          <p>Mumtaz Ma-Sharaf (A+)</p>
+        </div>
+        <div class="timeline-item">
+          <h4>BS Urdu Language &amp; Literature</h4>
+          <div class="place">University of the Punjab</div>
+          <div class="year">2021 - 2023</div>
+          <p>CGPA: 3.67/4.00</p>
+        </div>
+        <div class="timeline-item">
+          <h4>BA</h4>
+          <div class="place">University of the Punjab</div>
+          <div class="year">2019 - 2021</div>
+          <p>508/800</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+      <h3>Experience</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Islamic Studies &amp; Urdu Teacher</h4>
+          <div class="place">The Westbridge School, Lahore</div>
+          <div class="year">2022 - Present (3 Years)</div>
+          <p>Teaching Islamic Studies and Urdu. Received Excellent Teacher Award &amp; Certificate.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Islamic Studies Teacher</h4>
+          <div class="place">Naveed Majeed Academy, Lahore</div>
+          <div class="year">2023 - 2024 (1 Year)</div>
+          <p>Taught Quranic studies and Islamic curriculum.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Private Home Tutor</h4>
+          <div class="place">Garhi Shaho, Lahore</div>
+          <div class="year">Ongoing</div>
+          <p>Tailored one-on-one sessions in Qirat, Fiqh and Hadith. Guided students in academic, personal &amp; spiritual growth.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS & AWARDS -->
+    <div class="section">
+      <h3>Awards &amp; Certifications</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Best Speaker Award</h4>
+          <div class="place">Minhaj University, Lahore</div>
+          <p>Awarded Best Speaker certificate for outstanding public speaking and religious discourse.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Muslim Youth &amp; 21st Century Workshop</h4>
+          <div class="place">University of the Punjab</div>
+          <p>Certification for participation and contribution in workshop on Muslim Youth &amp; 21st Century.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESEARCH -->
+    <div class="section">
+      <h3>Research Work</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Religious Tolerance in the Quran</h4>
+          <p>Thesis on principles for interaction with non-Muslims, exploring Quranic guidance on interfaith dialogue and peaceful coexistence.</p>
+        </div>
+        <div class="timeline-item">
+          <h4>Kahi-un-Kahi</h4>
+          <p>Urdu Language &amp; Literature thesis exploring literary themes, poetic expression and the nuances of Urdu prose and poetry.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

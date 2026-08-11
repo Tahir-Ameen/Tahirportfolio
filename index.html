@@ -84,14 +84,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet"/>
-  <!-- Google Analytics (Google Search Console/GA4): replace G-XXXXXXXXXX with your real Measurement ID, or delete this block if you do not use Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
   <style>
     /* ===================== CSS VARIABLES ===================== */
     :root {
@@ -1401,7 +1393,7 @@
   <!-- ========== HERO ========== -->
   <section class="hero" id="home">
     <div class="hero-content">
-      <div class="hero-badge">👋 Available for Teaching Opportunities</div>
+      <div class="hero-badge"><i class="fa-solid fa-bolt" style="margin-right:0.4rem"></i>Available for Teaching Opportunities</div>
       <p class="hero-greeting">Assalam o Alaikum, I'm</p>
       <h1 class="hero-name">Muhammad Tahir Ameen</h1>
       <p class="hero-role">Islamic Educator & Quran Instructor</p>
@@ -1451,42 +1443,42 @@
     <h2 class="section-title">Skills & Expertise</h2>
     <div class="skills-grid">
       <div class="skill-card">
-        <div class="skill-icon">📖</div>
+        <div class="skill-icon"><i class="fa-solid fa-book-open"></i></div>
         <h3>Quranic Recitation & Tajweed</h3>
         <p>Expert-level recitation with proper Tajweed rules</p>
         <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
         <span class="skill-percent">95%</span>
       </div>
       <div class="skill-card">
-        <div class="skill-icon">📚</div>
+        <div class="skill-icon"><i class="fa-solid fa-clipboard-list"></i></div>
         <h3>Islamic Curriculum Design</h3>
         <p>Designing structured Islamic education programs</p>
         <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
         <span class="skill-percent">90%</span>
       </div>
       <div class="skill-card">
-        <div class="skill-icon">🎙️</div>
+        <div class="skill-icon"><i class="fa-solid fa-microphone"></i></div>
         <h3>Public Speaking</h3>
         <p>Religious speeches, event organization & khutbah</p>
         <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
         <span class="skill-percent">92%</span>
       </div>
       <div class="skill-card">
-        <div class="skill-icon">🏫</div>
+        <div class="skill-icon"><i class="fa-solid fa-school"></i></div>
         <h3>Classroom Instruction</h3>
         <p>Student mentoring, Fiqh, Hadith & Urdu teaching</p>
         <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
         <span class="skill-percent">88%</span>
       </div>
       <div class="skill-card">
-        <div class="skill-icon">🌐</div>
+        <div class="skill-icon"><i class="fa-solid fa-globe"></i></div>
         <h3>Arabic Language</h3>
         <p>Fluent in classical and modern Arabic</p>
         <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
         <span class="skill-percent">85%</span>
       </div>
       <div class="skill-card">
-        <div class="skill-icon">✍️</div>
+        <div class="skill-icon"><i class="fa-solid fa-pen-nib"></i></div>
         <h3>Writing & Poetry</h3>
         <p>Urdu literature, poetry and academic writing</p>
         <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
@@ -1556,12 +1548,12 @@
         <p>Delivered tailored one-on-one sessions in Qirat, Fiqh and Hadith. Guided students in academic, personal & spiritual growth.</p>
       </div>
       <div class="exp-card">
-        <h3>🏆 Best Speaker Award</h3>
+        <h3><i class="fa-solid fa-trophy" style="color:#f59e0b;margin-right:0.5rem"></i>Best Speaker Award</h3>
         <div class="exp-place">Minhaj University, Lahore</div>
         <p>Awarded Best Speaker certificate for outstanding public speaking and religious discourse.</p>
       </div>
       <div class="exp-card">
-        <h3>🏆 Muslim Youth & 21st Century Workshop</h3>
+        <h3><i class="fa-solid fa-certificate" style="color:#f59e0b;margin-right:0.5rem"></i>Muslim Youth & 21st Century Workshop</h3>
         <div class="exp-place">University of the Punjab</div>
         <p>Achieved certification for participation and contribution in the workshop on Muslim Youth & 21st Century.</p>
       </div>
@@ -1642,29 +1634,29 @@
   <section id="certificates">
     <h2 class="section-title">Certificates & Achievements</h2>
     <div class="cert-grid">
-      <div class="cert-card" onclick="openLightbox('Best Speaker Award', '🏆', 'Awarded by Minhaj University, Lahore for outstanding public speaking and religious discourse in interfaith dialogue competitions.')">
-        <div class="cert-thumb">🏆</div>
+      <div class="cert-card" data-title="Best Speaker Award" data-desc="Awarded by Minhaj University, Lahore for outstanding public speaking and religious discourse in interfaith dialogue competitions." onclick="openLightbox(this)">
+        <div class="cert-thumb"><i class="fa-solid fa-trophy"></i></div>
         <div class="cert-info">
           <h4>Best Speaker Award</h4>
           <p>Minhaj University, Lahore</p>
         </div>
       </div>
-      <div class="cert-card" onclick="openLightbox('Excellent Teacher Award', '🏅', 'Received from The Westbridge School, Lahore for exceptional dedication to Islamic education and student mentorship over 3 years.')">
-        <div class="cert-thumb">🏅</div>
+      <div class="cert-card" data-title="Excellent Teacher Award" data-desc="Received from The Westbridge School, Lahore for exceptional dedication to Islamic education and student mentorship over 3 years." onclick="openLightbox(this)">
+        <div class="cert-thumb"><i class="fa-solid fa-medal"></i></div>
         <div class="cert-info">
           <h4>Excellent Teacher Award</h4>
           <p>The Westbridge School, Lahore</p>
         </div>
       </div>
-      <div class="cert-card" onclick="openLightbox('Muslim Youth & 21st Century Workshop', '📜', 'Certified participant from University of the Punjab for contributions in the workshop on Muslim Youth & 21st Century challenges.')">
-        <div class="cert-thumb">📜</div>
+      <div class="cert-card" data-title="Muslim Youth & 21st Century Workshop" data-desc="Certified participant from University of the Punjab for contributions in the workshop on Muslim Youth & 21st Century challenges." onclick="openLightbox(this)">
+        <div class="cert-thumb"><i class="fa-solid fa-scroll"></i></div>
         <div class="cert-info">
           <h4>Muslim Youth Workshop</h4>
           <p>University of the Punjab</p>
         </div>
       </div>
-      <div class="cert-card" onclick="openLightbox('MA Islamic Studies (Dars-e-Nazami)', '🎓', 'Mumtaz Ma-Sharaf (A+) from Wafaq-ul-Madaris Islamia Rizvia, Pakistan — 8 years of intensive Islamic seminary education.')">
-        <div class="cert-thumb">🎓</div>
+      <div class="cert-card" data-title="MA Islamic Studies (Dars-e-Nazami)" data-desc="Mumtaz Ma-Sharaf (A+) from Wafaq-ul-Madaris Islamia Rizvia, Pakistan — 8 years of intensive Islamic seminary education." onclick="openLightbox(this)">
+        <div class="cert-thumb"><i class="fa-solid fa-graduation-cap"></i></div>
         <div class="cert-info">
           <h4>MA Islamic Studies</h4>
           <p>Wafaq-ul-Madaris Islamia Rizvia</p>
@@ -1678,22 +1670,22 @@
     <h2 class="section-title">Get In Touch</h2>
     <p style="color:var(--text-soft);margin-bottom:2.5rem">Feel free to reach out for teaching opportunities, collaborations or academic discussions.</p>
     <div class="contact-cards">
-      <div class="contact-card" onclick="showToast('Phone number copied!', 'success')">
-        <div class="contact-icon">📞</div>
+      <div class="contact-card" onclick="copyPhone()">
+        <div class="contact-icon"><i class="fa fa-phone" style="color:var(--accent)"></i></div>
         <div>
           <p class="contact-label">Phone</p>
           <p class="contact-value">+92-308-4870782</p>
         </div>
       </div>
-      <div class="contact-card" onclick="showToast('Opening email...', 'success')">
-        <div class="contact-icon">📧</div>
+      <div class="contact-card" onclick="window.location.href='mailto:hafiztahirameen786@gmail.com'">
+        <div class="contact-icon"><i class="fa fa-envelope" style="color:var(--accent)"></i></div>
         <div>
           <p class="contact-label">Email</p>
           <p class="contact-value">hafiztahirameen786@gmail.com</p>
         </div>
       </div>
-      <div class="contact-card" onclick="showToast('Location: University of the Punjab', 'success')">
-        <div class="contact-icon">📍</div>
+      <div class="contact-card" onclick="openLocation()">
+        <div class="contact-icon"><i class="fa fa-location-dot" style="color:var(--accent)"></i></div>
         <div>
           <p class="contact-label">Location</p>
           <p class="contact-value">University of the Punjab</p>
@@ -1761,7 +1753,7 @@
         </div>
       </div>
       <div class="profile-actions">
-        <button class="btn btn-primary btn-sm" onclick="showToast('Settings coming soon!', 'default')">
+        <button class="btn btn-primary btn-sm" onclick="showToast('Settings are coming soon.', 'default')">
           <i class="fa fa-gear"></i> Settings
         </button>
         <button class="btn btn-outline btn-sm" onclick="logout()" style="border-color:#dc2626;color:#dc2626">
@@ -1773,13 +1765,10 @@
 
   <footer>
     <div class="footer-social">
-      <a href="https://www.youtube.com/@YourChannel" target="_blank" rel="noopener noreferrer" class="social-link" title="YouTube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.facebook.com/YourProfile" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="https://www.instagram.com/YourProfile" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com/in/YourProfile" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="mailto:hafiztahirameen786@gmail.com" class="social-link" title="Email" aria-label="Email"><i class="fa fa-envelope"></i></a>
       <a href="https://wa.me/923084870782" target="_blank" rel="noopener noreferrer" class="social-link" title="WhatsApp" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
-    <p>Designed & Built with ❤️ by <strong>Muhammad Tahir Ameen</strong> &copy; 2025</p>
+    <p>Designed &amp; built with <i class="fa fa-heart" style="color:#dc2626"></i> by <strong>Muhammad Tahir Ameen</strong> &copy; <span id="year">2025</span></p>
   </footer>
 </div>
 
@@ -1787,7 +1776,7 @@
 <div class="modal-overlay" id="modal-overlay">
   <div class="modal">
     <h3>Download CV</h3>
-    <p>Kya aap Muhammad Tahir Ameen ki complete CV download karna chahte hain?</p>
+    <p>Would you like to download the complete CV of Muhammad Tahir Ameen?</p>
     <div class="modal-btns">
       <button class="btn btn-ghost btn-sm" onclick="closeModal()">Cancel</button>
       <button class="btn btn-primary btn-sm" onclick="confirmDownload()"><i class="fa fa-download"></i> Download</button>
@@ -2017,13 +2006,30 @@
     }, 3000);
   }
 
+  // Copy phone number to clipboard
+  function copyPhone() {
+    const phone = "+92-308-4870782";
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(phone).then(() => {
+        showToast("Phone number copied!", "success");
+      }).catch(() => showToast("Could not copy phone number.", "error"));
+    } else {
+      showToast(phone, "success");
+    }
+  }
+
+  // Open location in Google Maps
+  function openLocation() {
+    window.open("https://maps.google.com/?q=University+of+the+Punjab,+Lahore", "_blank");
+  }
+
   // ===== 7. MODAL =====
   function openModal() { document.getElementById("modal-overlay").classList.add("open"); }
   function closeModal() { document.getElementById("modal-overlay").classList.remove("open"); }
   function confirmDownload() {
     closeModal();
     window.open('cv.html', '_blank');
-    showToast("CV open ho rahi hai!", "success");
+    showToast("Opening CV...", "success");
   }
   document.getElementById("modal-overlay").addEventListener("click", e => {
     if (e.target === e.currentTarget) closeModal();
@@ -2071,7 +2077,7 @@
     })
     .then(r => {
       if (r.ok) {
-        showToast("Message sent successfully! 🎉", "success");
+        showToast("Message sent successfully!", "success");
         this.reset();
         quill.setText('');
       } else {
@@ -2108,7 +2114,7 @@
 
   // ===== 10. SKELETON (simulate loading) =====
   window.addEventListener("load", () => {
-    showToast("Portfolio load ho gaya! 🎉", "success");
+    showToast("Welcome to my portfolio!", "success");
   });
 
   // ===== 10b. CODE INTRO SECTION - line by line reveal =====
@@ -2197,7 +2203,7 @@
     }
   });
 
-  // Quill content ko hidden textarea mein sync karo
+  // Sync Quill content to the hidden textarea
   quill.on('text-change', () => {
     document.getElementById('message-hidden').value = quill.root.innerHTML;
   });
@@ -2282,7 +2288,7 @@
       showToast("Account created! Welcome, " + data.user.name + "!", "success");
       this.reset();
     } catch (err) {
-      showToast("Server se connection nahi ho paya!", "error");
+      showToast("Unable to connect to the server.", "error");
     }
   });
 
@@ -2311,13 +2317,13 @@
       showToast("Welcome, " + data.user.name + "!", "success");
       this.reset();
     } catch (err) {
-      showToast("Server se connection nahi ho paya!", "error");
+      showToast("Unable to connect to the server.", "error");
     }
   });
 
   // Social login placeholder
   function socialLogin(provider) {
-    showToast(provider.charAt(0).toUpperCase() + provider.slice(1) + " login coming soon!", "default");
+    showToast(provider.charAt(0).toUpperCase() + provider.slice(1) + " login coming soon.", "default");
   }
 
   // Auth UI update
@@ -2372,7 +2378,7 @@
     showToast("Logged out successfully!", "success");
   }
 
-  // Page load pe check karo - token se user info lao
+  // On page load, restore the user session from the stored token
   (async function checkAuth() {
     const token = getToken();
     if (!token) return;
@@ -2418,10 +2424,11 @@
   switchLang(currentLang);
 
   // ===== LIGHTBOX =====
-  function openLightbox(title, icon, desc) {
-    document.getElementById("lightbox-icon").textContent = icon;
-    document.getElementById("lightbox-title").textContent = title;
-    document.getElementById("lightbox-desc").textContent = desc;
+  function openLightbox(card) {
+    const thumb = card.querySelector(".cert-thumb");
+    if (thumb) document.getElementById("lightbox-icon").innerHTML = thumb.innerHTML;
+    document.getElementById("lightbox-title").textContent = card.dataset.title || "";
+    document.getElementById("lightbox-desc").textContent = card.dataset.desc || "";
     document.getElementById("lightbox-overlay").classList.add("open");
   }
   function closeLightbox(e) {
@@ -2441,6 +2448,9 @@
       preloader.classList.add("hidden");
     }
   }, 5000);
+
+  // ===== FOOTER YEAR =====
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
 </html>

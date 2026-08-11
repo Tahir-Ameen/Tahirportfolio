@@ -250,6 +250,9 @@
     .sidebar.collapsed:hover + .main {
       margin-left: var(--sidebar-w);
     }
+    .sidebar.collapsed:hover + .main .topbar {
+      left: var(--sidebar-w);
+    }
     .sidebar.collapsed:hover .sidebar-logo { opacity: 1; width: auto; }
     .sidebar.collapsed:hover .nav-item span { opacity: 1; width: auto; overflow: visible; }
     .sidebar.collapsed:hover .nav-item::after { display: none; }
@@ -258,6 +261,7 @@
     .main {
       margin-left: var(--sidebar-collapsed);
       flex: 1;
+      padding-top: 72px;
       transition: margin-left 0.3s ease;
     }
     .main.expanded { margin-left: var(--sidebar-collapsed); }
@@ -270,9 +274,12 @@
       padding: 0.9rem 2rem;
       background: var(--white);
       border-bottom: 1px solid var(--border);
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: var(--sidebar-collapsed);
+      right: 0;
       z-index: 100;
+      transition: left 0.3s ease;
     }
     .topbar-name {
       font-family: var(--font-head);
@@ -364,7 +371,7 @@
     .dropdown-item:hover { background: var(--accent-lt); color: var(--accent); }
 
     /* ===================== SECTIONS ===================== */
-    section { padding: 5rem 3rem; }
+    section { padding: 5rem 3rem; scroll-margin-top: 72px; }
     section:nth-child(even) { background: var(--white); }
 
     .section-title {

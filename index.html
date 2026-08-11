@@ -1056,9 +1056,15 @@
 
       .sidebar { transform: translateX(-100%); width: var(--sidebar-w); }
       .sidebar.mobile-open { transform: translateX(0); }
-      .main { margin-left: 0 !important; }
+      .main { margin-left: 0 !important; padding-top: 58px; }
 
-      .topbar { padding: 0.7rem 1rem; gap: 0.5rem; flex-wrap: nowrap; overflow-x: auto; }
+      .topbar {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        width: 100%;
+        z-index: 150;
+        padding: 0.7rem 1rem; gap: 0.5rem; flex-wrap: nowrap; overflow-x: auto;
+      }
       .topbar-name { font-size: 1rem; }
       .topbar-right { gap: 0.5rem; }
       .topbar-right .dropdown-wrap,
@@ -1072,7 +1078,7 @@
       .hero-buttons { justify-content: center; }
       .photo-frame { width: 180px; height: 220px; }
 
-      section { padding: 3rem 1.2rem; }
+      section { padding: 3rem 1.2rem; scroll-margin-top: 58px; }
       .section-title { margin-bottom: 2rem; }
       .about-info { grid-template-columns: 1fr; max-width: 100%; }
 

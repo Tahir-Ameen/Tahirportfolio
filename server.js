@@ -181,8 +181,14 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+// ===== 404 & FALLBACK =====
+
+app.use("/api", (req, res) => {
+  res.status(404).json({ error: "Endpoint not found" });
+});
+
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "404.html"));
 });
 
 app.listen(PORT, () => {

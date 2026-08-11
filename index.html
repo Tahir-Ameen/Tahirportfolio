@@ -2045,7 +2045,6 @@
   document.addEventListener("click", () => dropMenu.classList.remove("open"));
   document.querySelectorAll(".dropdown-item").forEach(item => {
     item.addEventListener("click", () => {
-      showToast("Language: " + item.textContent.trim(), "success");
       dropMenu.classList.remove("open");
     });
   });
@@ -2400,9 +2399,8 @@
   // ===== LANGUAGE SWITCHER (Urdu/English) =====
   let currentLang = localStorage.getItem("portfolio_lang") || "en";
 
-  function switchLang(lang) {
+  function applyLang(lang) {
     currentLang = lang;
-    localStorage.setItem("portfolio_lang", lang);
     document.documentElement.setAttribute("lang", lang === "ur" ? "ur" : "en");
     document.documentElement.setAttribute("data-lang", lang);
 
@@ -2416,12 +2414,16 @@
         ? '<i class="fa fa-globe"></i> زبان <i class="fa fa-chevron-down" style="font-size:0.7rem"></i>'
         : '<i class="fa fa-globe"></i> Language <i class="fa fa-chevron-down" style="font-size:0.7rem"></i>';
     }
-
-    showToast(lang === "ur" ? "زبان تبدیل کر دی گئی" : "Language switched to English", "success");
   }
 
-  // Set initial language
-  switchLang(currentLang);
+  function switchLang(lang) {
+    applyLang(lang);
+    localStorage.setItem("portfolio_lang", lang);
+    showToast(lang === "ur" ? "زبان تبدیل کر دی گئی" : "Language set to English", "success");
+  }
+
+  // Apply saved language on load (without showing a toast)
+  applyLang(currentLang);
 
   // ===== LIGHTBOX =====
   function openLightbox(card) {
